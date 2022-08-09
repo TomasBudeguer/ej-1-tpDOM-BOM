@@ -1,8 +1,7 @@
 function comenzarJuego() {
-  console.log("comenzo");
   let sectionJuego = document.querySelector("#sectionJuego");
   let formNuevo = document.createElement("form");
-  formNuevo.className = "input-group mb-3 container";
+  formNuevo.className = "container d-flex my-3";
   let inputNuevo = document.createElement("input");
   inputNuevo.placeholder = "Escriba un numero del 1 al 10";
   inputNuevo.type = "text";
@@ -14,7 +13,6 @@ function comenzarJuego() {
   botonSubmit.className = "btn btn-primary";
   botonSubmit.type = "button";
   botonSubmit.onclick = buscar;
-  console.log(inputNuevo);
   sectionJuego.appendChild(formNuevo);
   formNuevo.appendChild(inputNuevo);
   formNuevo.appendChild(botonSubmit);
@@ -27,7 +25,6 @@ function generarNumero() {
 }
 function buscar() {
   let buscador = document.querySelector("#buscador").value;
-  console.log(buscador);
   if (buscador == numerosX[0]) {
     alert("Felicidades es el Numero!! (Recargar para jugar otra vez)");
   } else if (buscador > numerosX[0]) {
